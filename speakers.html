@@ -209,14 +209,34 @@ path planning, obstacle avoidance and manipulation.
 		</p>
 	</div>
 
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/stefanescaida.jpeg" alt="Stefan Escaida" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://scholar.google.de/citations?user=BSpXuKwAAAAJ&hl=de" target="_blank">Stefan Escaida</br></a></strong>
-			<a href="https://sites.google.com/uoh.cl/uoh-ai-robotics-group/home" target="_blank">AI &amp; Robotics Group</a></br>
-			<a href="https://www.uoh.cl/" target="_blank">Universidad de O'Higgins</a></br>
-			Title of the talk: <it>Model-Based Sensing for Soft Robotics with SOFA</it><br/>
-		</p>
+            <div class="flex flex-col md:flex-row gap-4">
+                <img src="images/display/stefanescaida.jpeg" alt="Stefan Escaida" class="w-[135px] h-[155px] border border-black object-cover mx-auto md:mx-0">
+                
+                <div class="flex-1">
+                    <div class="space-y-2">
+                        <h2 class="text-xl font-bold">
+                            <a href="https://scholar.google.de/citations?user=BSpXuKwAAAAJ&hl=de" target="_blank" class="text-blue-600 hover:text-blue-800">
+                                Stefan Escaida
+                            </a>
+                        </h2>
+                        
+                        <div class="space-y-1 text-gray-700">
+                            <p>
+                                <a href="https://sites.google.com/uoh.cl/uoh-ai-robotics-group/home" target="_blank" class="text-blue-600 hover:text-blue-800">
+                                    AI & Robotics Group
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://www.uoh.cl/" target="_blank" class="text-blue-600 hover:text-blue-800">
+                                    Universidad de O'Higgins
+                                </a>
+                            </p>
+                            <p>
+                                <span class="font-semibold">Title of the talk:</span> 
+                                <em>Model-Based Sensing for Soft Robotics with SOFA</em>
+                            </p>
+                        </div>
+                        
                         <div class="mt-3">
                             <button class="abstract-btn flex items-center gap-2 px-3 py-1 bg-gray-200 hover:bg-gray-300 rounded-md transition-colors">
                                 <span class="font-semibold">Abstract</span>
@@ -228,8 +248,10 @@ path planning, obstacle avoidance and manipulation.
                                     In this talk, I will report on our work on model-based sensing for soft robots. Model-based sensing addresses the challenge of enabling tactile sensing and proprioception for soft robots in a principled way. Using inverse problem solving in an interactive solid mechanics simulation, the forces/deformations that best explain the observed sensor readings can be found. The first results in this line of research were obtained with soft pads, which are passive devices. Air chambers are embedded in these devices and changes in volume or pressure are measured by pneumatic sensors. Forces magnitudes and deformations due to external interactions could be estimated using SOFA. However, for estimating contact location, machine learning had to be employed. Therefore, as a follow-up, a multi-modal sensing approach was proposed: contact location is obtained additionally using soft capacitive touchpads. With them, interactions can completely be handled by the model-based approach, i.e. without relying machine learning. In more recent works, it was studied how these approaches can be applied to actuated devices. We have found that these results can be applied to the development of anatomical soft robots, that is, novel medical phantoms having advanced functionality as well as multi-segment soft manipulators.
                                 </p>
                             </div>
-                        </div>		
-	</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 		
 	</table>
 </div>
@@ -269,5 +291,18 @@ path planning, obstacle avoidance and manipulation.
   </div>
 </div>
 <!-- ####################################################################################################### -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const abstractBtn = document.querySelector('.abstract-btn');
+            const abstractContent = document.querySelector('.abstract-content');
+            
+            abstractBtn.addEventListener('click', function() {
+                // Toggle the expanded/collapsed state
+                abstractContent.classList.toggle('collapsed');
+                abstractContent.classList.toggle('expanded');
+                abstractBtn.classList.toggle('expanded');
+            });
+        });
+    </script>	  
 </body>
 </html>
