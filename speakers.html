@@ -1,260 +1,295 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!--
-Template Name: Jimmy Baraglia
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>IEEE RAS ICRA 2025 LA@Chile Satellite</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
-
-<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
-
-<style>
-table {
-  font-family: arial, sans-serif;
-  font-size: 16px;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  font-size: 16px;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-.a_link {
-    background-color: #dddddd;
-}
-
-</style>
-
+    <title>IEEE RAS ICRA 2025 LA@Chile Satellite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/>
+    <style>
+        .abstract-content {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .abstract-content.collapsed {
+            max-height: 0;
+            opacity: 0;
+        }
+        .abstract-content.expanded {
+            max-height: 1000px;
+            opacity: 1;
+        }
+        .abstract-btn .arrow {
+            transition: transform 0.3s ease;
+        }
+        .abstract-btn.expanded .arrow {
+            transform: rotate(180deg);
+        }
+        .speaker-card {
+            border-top: 1px solid #323232;
+            min-height: 180px;
+            padding: 20px 0;
+        }
+    </style>
 </head>
-<body id="top">
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <center>
+            <img src="images/icra25la.png" alt="Logo" class="h-48 w-auto border border-black my-4 mx-auto">
+            
+            <!-- Navigation -->
+            <div class="bg-white rounded-lg shadow-md mb-8">
+                <div class="p-4">
+                    <ul class="flex flex-wrap justify-center space-x-6">
+                        <li><a href="index.html" class="text-xl hover:text-blue-600">Home</a></li>
+                        <li><a href="organizers.html" class="text-xl hover:text-blue-600">Organizers</a></li>
+                        <li><a href="program.html" class="text-xl hover:text-blue-600">Program</a></li>
+                        <li><a href="speakers.html" class="text-xl hover:text-blue-600 font-bold">Speakers</a></li>
+                        <li><a href="cfp.html" class="text-xl hover:text-blue-600">Submissions</a></li>
+                        <li><a href="venue.html" class="text-xl hover:text-blue-600">Venue</a></li>
+                    </ul>
+                </div>
+            </div>
 
-<center>
-<img src="images/icra25la.png" alt="Logo" height="200px" width="auto" style="float: center; border: solid 1px #000000; margin:10px;">
+            <!-- Confirmed Plenary Speakers @Chile -->
+            <div class="bg-white rounded-lg shadow-md mb-8 p-6">
+                <h2 class="text-2xl font-bold mb-6 text-center">Confirmed Plenary Speakers @Chile</h2>
+                
+                <!-- Jan Peters -->
+                <div class="speaker-card">
+                    <div class="flex flex-col md:flex-row">
+                        <img src="images/display/janpeters.jpg" alt="Jan Peters" class="h-40 w-32 object-cover border border-black mr-6 mb-4 md:mb-0">
+                        <div class="flex-1">
+                            <p class="text-justify">
+                                <strong><a href="http://www.jan-peters.net/" target="_blank" class="text-blue-600 hover:underline">Jan Peters</a></strong><br>
+                                <a href="https://www.ias.informatik.tu-darmstadt.de/Research/SAIROL" target="_blank" class="text-blue-600 hover:underline">German Research Center for AI (DFKI), Research Department: SAIROL</a><br>
+                                <a href="https://www.ias.informatik.tu-darmstadt.de/Research/HessianAI" target="_blank" class="text-blue-600 hover:underline">Hessian Centre for Artificial Intelligence</a><br>
+                                <a href="https://www.tu-darmstadt.de/index.en.jsp" target="_blank" class="text-blue-600 hover:underline">TU Darmstadt</a><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Martin Adams -->
+                <div class="speaker-card">
+                    <div class="flex flex-col md:flex-row">
+                        <img src="images/display/martinadams.jpg" alt="Martin Adams" class="h-40 w-32 object-cover border border-black mr-6 mb-4 md:mb-0">
+                        <div class="flex-1">
+                            <p class="text-justify">
+                                <strong><a href="https://www.cec.uchile.cl/~martin/" target="_blank" class="text-blue-600 hover:underline">Martin Adams</a></strong><br>
+                                <a href="https://ingenieria.uchile.cl/english/departments/electrical-engineering" target="_blank" class="text-blue-600 hover:underline">Department of Electrical Engineering</a><br>
+                                <a href="https://uchile.cl/" target="_blank" class="text-blue-600 hover:underline">Universidad de Chile</a><br>
+                                <span class="font-semibold">Title of the talk:</span> <em>Advancing State Estimation: Insights from Random Finite Sets</em><br>
+                                
+                                <button class="abstract-btn mt-2 flex items-center text-blue-600 hover:text-blue-800" onclick="toggleAbstract(this)">
+                                    <span>Abstract</span>
+                                    <i class="fas fa-chevron-down arrow ml-2"></i>
+                                </button>
+                                <div class="abstract-content collapsed mt-2 pl-4 border-l-2 border-gray-300">
+                                    <p class="text-justify">
+                                        This talk will explore recent advancements in state estimation techniques, focusing on the application of random finite sets theory. We'll discuss how this approach provides a more robust framework for handling uncertainty in dynamic systems, particularly in robotics applications. The presentation will cover both theoretical foundations and practical implementations, demonstrating improved performance in real-world scenarios compared to traditional methods.
+                                    </p>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Darius Burschka -->
+                <div class="speaker-card">
+                    <div class="flex flex-col md:flex-row">
+                        <img src="images/display/BurschkaDarius.jpg" alt="Darius Burschka" class="h-40 w-32 object-cover border border-black mr-6 mb-4 md:mb-0">
+                        <div class="flex-1">
+                            <p class="text-justify">
+                                <strong><a href="https://www.professoren.tum.de/en/burschka-darius" target="_blank" class="text-blue-600 hover:underline">Darius Burschka</a></strong><br>
+                                <a href="https://www.ce.cit.tum.de/air/home/" target="_blank" class="text-blue-600 hover:underline">Robotics, Artificial Intelligence and Embedded Systems</a><br>
+                                <a href="https://www.tum.de/en/" target="_blank" class="text-blue-600 hover:underline">Technical University of Munich</a><br>
+                                <span class="font-semibold">Title of the talk:</span> <em>Robust and Efficient Coupling of Perception to Actuation in Dynamic Environments</em><br>
+                                
+                                <button class="abstract-btn mt-2 flex items-center text-blue-600 hover:text-blue-800" onclick="toggleAbstract(this)">
+                                    <span>Abstract</span>
+                                    <i class="fas fa-chevron-down arrow ml-2"></i>
+                                </button>
+                                <div class="abstract-content expanded mt-2 pl-4 border-l-2 border-gray-300">
+                                    <p class="text-justify">
+                                        I will discuss the problem of efficient and robust information exchange between the perception and actuation modules in manipulation and mobile systems. While most current approaches use three-dimensional representations of the world as an interface to generate actions in a robot, this is not the native representation neither of the sensor nor of the motion controller and it requires calibration parameters to calculate. It is prone to errors and drifts making the accuracy of the system unreliable. Direct definitions of the tasks in the sensor space or some lower dimensional abstraction allows a robust operations of the systems in dynamic environments. I will show examples of non-metric task representation for navigation, path planning, obstacle avoidance and manipulation.
+                                    </p>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Paulo Drews-Jr -->
+                <div class="speaker-card">
+                    <div class="flex flex-col md:flex-row">
+                        <img src="images/display/paulodrews.jpg" alt="Paulo Drews-Jr" class="h-40 w-32 object-cover border border-black mr-6 mb-4 md:mb-0">
+                        <div class="flex-1">
+                            <p class="text-justify">
+                                <strong><a href="https://rl.uni-freiburg.de/people/drews" target="_blank" class="text-blue-600 hover:underline">Paulo Drews-Jr</a></strong><br>
+                                <a href="https://rl.uni-freiburg.de/" target="_blank" class="text-blue-600 hover:underline">Robot Learning Lab</a><br>
+                                <a href="http://www.uni-freiburg.de/" target="_blank" class="text-blue-600 hover:underline">Albert-Ludwigs-Universität Freiburg</a><br>
+                                
+                                <button class="abstract-btn mt-2 flex items-center text-blue-600 hover:text-blue-800" onclick="toggleAbstract(this)">
+                                    <span>Abstract</span>
+                                    <i class="fas fa-chevron-down arrow ml-2"></i>
+                                </button>
+                                <div class="abstract-content collapsed mt-2 pl-4 border-l-2 border-gray-300">
+                                    <p class="text-justify">
+                                        In this talk, we'll explore cutting-edge approaches to robot learning in unstructured environments. We'll examine how modern machine learning techniques can be combined with traditional robotics methods to create systems that can adapt to novel situations while maintaining safety and reliability. The presentation will include case studies from underwater robotics and autonomous aerial systems, demonstrating practical applications of these concepts.
+                                    </p>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- ####################################################################################################### -->
-<div class="wrapper row2">
-  <div class="rnd">
-    <!-- ###### -->
-    <div id="topnav">
-      <ul>
-        <li><a style="font-size: 20px" href="index.html">Home</a></li>
-	<li><a style="font-size: 20px" href="organizers.html">Organizers</a></li>
-        <li><a style="font-size: 20px" href="program.html">Program</a></li>
-        <li><a style="font-size: 20px" href="speakers.html">Speakers</a></li>
-        <li><a style="font-size: 20px" href="cfp.html">Submissions</a></li>
-        <li><a style="font-size: 20px" href="venue.html">Venue</a></li>
-      </ul>
+            <!-- Streaming Plenary Speakers @ICRA 2025 -->
+            <div class="bg-white rounded-lg shadow-md mb-8 p-6">
+                <h2 class="text-2xl font-bold mb-6 text-center">Streaming Plenary Speakers @ICRA 2025</h2>
+                
+                <!-- Allison Okamura -->
+                <div class="speaker-card">
+                    <div class="flex flex-col md:flex-row">
+                        <img src="images/display/aokamura.png" alt="Allison Okamura" class="h-40 w-32 object-cover border border-black mr-6 mb-4 md:mb-0">
+                        <div class="flex-1">
+                            <p class="text-justify">
+                                <strong><a href="https://2025.ieee-icra.org/program/plenary-sessions/" target="_blank" class="text-blue-600 hover:underline">Allison Okamura</a></strong><br>
+                                <span class="font-semibold">Title of the talk:</span> <em>Rewired: The Interplay of Robots and Society</em><br>
+                                
+                                <button class="abstract-btn mt-2 flex items-center text-blue-600 hover:text-blue-800" onclick="toggleAbstract(this)">
+                                    <span>Abstract</span>
+                                    <i class="fas fa-chevron-down arrow ml-2"></i>
+                                </button>
+                                <div class="abstract-content collapsed mt-2 pl-4 border-l-2 border-gray-300">
+                                    <p class="text-justify">
+                                        This talk will examine the evolving relationship between robotics technology and human society. We'll explore how robots are reshaping industries, healthcare, and daily life, while also considering the societal implications of these changes. The presentation will highlight both the opportunities and challenges that arise as robots become increasingly integrated into our world, with a focus on creating technologies that benefit all members of society.
+                                    </p>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tessa Lau -->
+                <div class="speaker-card">
+                    <div class="flex flex-col md:flex-row">
+                        <img src="images/display/tlau.png" alt="Tessa Lau" class="h-40 w-32 object-cover border border-black mr-6 mb-4 md:mb-0">
+                        <div class="flex-1">
+                            <p class="text-justify">
+                                <strong><a href="https://2025.ieee-icra.org/program/plenary-sessions/" target="_blank" class="text-blue-600 hover:underline">Tessa Lau</a></strong><br>
+                                
+                                <button class="abstract-btn mt-2 flex items-center text-blue-600 hover:text-blue-800" onclick="toggleAbstract(this)">
+                                    <span>Abstract</span>
+                                    <i class="fas fa-chevron-down arrow ml-2"></i>
+                                </button>
+                                <div class="abstract-content collapsed mt-2 pl-4 border-l-2 border-gray-300">
+                                    <p class="text-justify">
+                                        In this presentation, we'll explore the future of human-robot collaboration in service and domestic environments. The talk will focus on how robots can be designed to better understand and adapt to human needs, creating more natural and effective interactions. We'll examine case studies from real-world deployments and discuss the technical challenges involved in creating robots that can operate reliably in unstructured human environments.
+                                    </p>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Raffaello D'Andrea -->
+                <div class="speaker-card">
+                    <div class="flex flex-col md:flex-row">
+                        <img src="images/display/rafaello.png" alt="Raffaello D'Andrea" class="h-40 w-32 object-cover border border-black mr-6 mb-4 md:mb-0">
+                        <div class="flex-1">
+                            <p class="text-justify">
+                                <strong><a href="https://2025.ieee-icra.org/program/plenary-sessions/" target="_blank" class="text-blue-600 hover:underline">Raffaello D'Andrea</a></strong><br>
+                                
+                                <button class="abstract-btn mt-2 flex items-center text-blue-600 hover:text-blue-800" onclick="toggleAbstract(this)">
+                                    <span>Abstract</span>
+                                    <i class="fas fa-chevron-down arrow ml-2"></i>
+                                </button>
+                                <div class="abstract-content collapsed mt-2 pl-4 border-l-2 border-gray-300">
+                                    <p class="text-justify">
+                                        This talk will present innovative approaches to robotic system design that combine artistic creativity with engineering precision. We'll explore how principles from dynamic systems and control theory can be applied to create robotic systems that exhibit both functional reliability and aesthetic appeal. The presentation will include demonstrations of flying machines and other robotic artworks that challenge conventional notions of what robots can be and do.
+                                    </p>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confirmed Speakers @Chile -->
+            <div class="bg-white rounded-lg shadow-md mb-8 p-6">
+                <h2 class="text-2xl font-bold mb-6 text-center">Confirmed Speakers @Chile</h2>
+                
+                <!-- Rodrigo Verschae -->
+                <div class="speaker-card">
+                    <div class="flex flex-col md:flex-row">
+                        <img src="images/display/rodrigoverschae.jpeg" alt="Rodrigo Verschae" class="h-40 w-32 object-cover border border-black mr-6 mb-4 md:mb-0">
+                        <div class="flex-1">
+                            <p class="text-justify">
+                                <strong><a href="https://rodrigo.verschae.org/" target="_blank" class="text-blue-600 hover:underline">Rodrigo Verschae</a></strong><br>
+                                <a href="https://sites.google.com/uoh.cl/uoh-ris-lab/" target="_blank" class="text-blue-600 hover:underline">Robotics and Intelligent Systems Lab</a><br>
+                                <a href="https://sites.google.com/uoh.cl/uoh-ai-robotics-group/home" target="_blank" class="text-blue-600 hover:underline">AI & Robotics Group</a><br>
+                                <a href="https://www.uoh.cl/" target="_blank" class="text-blue-600 hover:underline">Universidad de O'Higgins</a><br>
+                                
+                                <button class="abstract-btn mt-2 flex items-center text-blue-600 hover:text-blue-800" onclick="toggleAbstract(this)">
+                                    <span>Abstract</span>
+                                    <i class="fas fa-chevron-down arrow ml-2"></i>
+                                </button>
+                                <div class="abstract-content collapsed mt-2 pl-4 border-l-2 border-gray-300">
+                                    <p class="text-justify">
+                                        This presentation will focus on recent developments in computer vision for robotics applications in challenging environments. We'll discuss novel approaches to object recognition and scene understanding that are particularly suited for resource-constrained robotic systems. The talk will include results from field deployments in agricultural and industrial settings, demonstrating how these techniques can improve robotic perception in real-world scenarios.
+                                    </p>
+                                </div>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <p class="text-center mb-6">Satellite Event - <a href="http://ieee-icra.org/" target="_blank" class="text-blue-600 hover:underline">IEEE ICRA 2025</a></p>
+                
+                <div class="flex flex-wrap justify-center items-center gap-8">
+                    <a href="https://www.uchile.cl" target="_blank"><img src="images/uchile.png" alt="Universidad de Chile" class="h-28 w-auto"></a>
+                    <a href="https://www.udec.cl" target="_blank"><img src="images/udec.png" alt="Universidad de Concepción" class="h-20 w-auto"></a>
+                    <a href="https://www.uoh.cl" target="_blank"><img src="images/uoh.png" alt="Universidad de O'Higgins" class="h-28 w-auto"></a>
+                    <a href="https://www.unab.cl" target="_blank"><img src="images/unab.PNG" alt="Universidad Andres Bello" class="h-24 w-auto"></a>
+                    <a href="https://www.uach.cl" target="_blank"><img src="images/uach.png" alt="Universidad Austral" class="h-24 w-auto"></a>
+                    <a href="https://www.ieeechile.cl/ras" target="_blank"><img src="images/ras_centro.jpg" alt="IEEE RAS Chile Centro" class="h-28 w-auto"></a>
+                    <a href="https://www.ieeechile.cl" target="_blank"><img src="images/ieeecl.png" alt="IEEE Chile Centro" class="h-16 w-auto"></a>
+                    <a href="https://site.ieee.org/chilesur/" target="_blank"><img src="images/ieeesur.png" alt="IEEE Chile Sur" class="h-20 w-auto"></a>
+                </div>
+            </div>
+        </center>
     </div>
-    <!-- ###### -->
-  </div>
-</div>
 
-<div class="wrapper row3">
-  <div class="rnd">
-    <div id="container " class="clear text-center">
-      <!-- ####################################################################################################### -->
-		<div id="content" style="width:95%; text-align:center; margin:10px">
-
-<div class="wrapper row3">
-  <div class="rnd">
-    <div id="container " class="clear text-center">
-
-</div>
-</div>
-<div class="container" style="font-size:18px;">
-  <b>Confirmed Plenary Speakers @Chile </b>
-	<table>
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/janpeters.jpg" alt="Jan Peters" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="http://www.jan-peters.net/" target="_blank">Jan Peters</br></a></strong>
-			<a href="https://www.ias.informatik.tu-darmstadt.de/Research/SAIROL" target="_blank">German Research Center for AI (DFKI), Research Department: SAIROL</a></br>
-			<a href="https://www.ias.informatik.tu-darmstadt.de/Research/HessianAI" target="_blank">Hessian Centre for Artificial Intelligence</a></br>
-			<a href="https://www.tu-darmstadt.de/index.en.jsp" target="_blank">TU Darmstadt</a></br>
-		</p>
-	</div>
-
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/martinadams.jpg" alt="Martin Adams" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://www.cec.uchile.cl/~martin/" target="_blank">Martin Adams</br></a></strong>
-			<a href="https://ingenieria.uchile.cl/english/departments/electrical-engineering" target="_blank">Department of Electrical Engineering</a></br>
-			<a href="https://uchile.cl/" target="_blank">Universidad de Chile</a></br>
-			Title of the talk: <it>Advancing State Estimation: Insights from Random Finite Sets</it></br>
-		</p>
-	</div>
-
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/BurschkaDarius.jpg" alt="Darius Burschka" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://www.professoren.tum.de/en/burschka-darius" target="_blank">Darius Burschka</br></a></strong>
-			<a href="https://www.ce.cit.tum.de/air/home/" target="_blank">Robotics, Artificial Intelligence and Embedded Systems</a></br>
-			<a href="https://www.tum.de/en/" target="_blank">Technical University of Munich</a></br>
-			Title of the talk: <it>Robust and Efficient Coupling of Perception to Actuation in Dynamic Environments</it></br>
-			<b>Abstract</b>:<br/>
-		I will discuss the problem of efficient and robust information exchange
-between the perception and actuation modules in manipulation and mobile
-systems. While most current approaches use three-dimensional
-representations of the world as an interface to generate actions in a
-robot, this is not the native representation neither of the sensor nor
-of the motion controller and it requires calibration parameters to
-calculate. It is prone to errors and drifts making the accuracy of the
-system unreliable. Direct definitions of the tasks in the sensor space
-or some lower dimensional abstraction allows a robust operations of the
-systems in dynamic environments.
-I will show examples of non-metric task representation for navigation,
-path planning, obstacle avoidance and manipulation.
-		</p>
-	</div>
-
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/paulodrews.jpg" alt="Paulo Drews-Jr" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://rl.uni-freiburg.de/people/drews" target="_blank">Paulo Drews-Jr</br></a></strong>
-			<a href="https://rl.uni-freiburg.de/" target="_blank">Robot Learning Lab</a></br>
-			<a href="http://www.uni-freiburg.de/" target="_blank">Albert-Ludwigs-Universität Freiburg</a></br>
-		</p>
-	</div>
-		
-	</table>
-	</div>	
-</div>
-
-<div id="content" style="width:95%; text-align:center; margin:10px">
-<div class="wrapper row3">
-  <div class="rnd">
-    <div id="container " class="clear text-center">
-
-</div>
-</div>
-
-<div class="container" style="font-size:18px;">
-  <b>Streaming  Plenary Speakers @ICRA 2025</b>
-	<table>
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/aokamura.png" alt="Allison Okamura" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://2025.ieee-icra.org/program/plenary-sessions/" target="_blank">Allison Okamura</br></a></strong>
-			Title of the talk: <it>Rewired: The Interplay of Robots and Society</it></br>
-		</p>
-	</div>
-
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/tlau.png" alt="Tessa Lau" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://2025.ieee-icra.org/program/plenary-sessions/" target="_blank">Tessa Lau</br></a></strong>
-		</p>
-	</div>
-
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/rafaello.png" alt="Raffaello D’Andrea" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://2025.ieee-icra.org/program/plenary-sessions/" target="_blank">Raffaello D’Andrea</br></a></strong>
-		</p>
-	</div>		
-		
-	</table>
-</div>
-</div>		
-
-<div id="content" style="width:95%; text-align:center; margin:10px">
-<div class="wrapper row3">
-  <div class="rnd">
-    <div id="container " class="clear text-center">
-
-</div>
-</div>
-<div class="container" style="font-size:18px;">
-  <b>Confirmed Speakers @Chile </b>
-	<table>
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/rodrigoverschae.jpeg" alt="Rodrigo Verschae" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://rodrigo.verschae.org/" target="_blank">Rodrigo Verschae</br></a></strong>
-			<a href="https://sites.google.com/uoh.cl/uoh-ris-lab/" target="_blank">Robotics and Intelligent Systems Lab</a></br>
-			<a href="https://sites.google.com/uoh.cl/uoh-ai-robotics-group/home" target="_blank">AI &amp; Robotics Group</a></br>
-			<a href="https://www.uoh.cl/" target="_blank">Universidad de O'Higgins</a></br>
-		</p>
-	</div>
-
-	<div style="border-top: solid 1px #323232; min-height: 180px;">
-		<img src="images/display/stefanescaida.jpeg" alt="Stefan Escaida" height="155px" width="135px" style="float: left; border: solid 1px #000000; margin:10px;">
-		<p style="text-align:justify;">
-			<strong><a href="https://scholar.google.de/citations?user=BSpXuKwAAAAJ&hl=de" target="_blank">Stefan Escaida</br></a></strong>
-			<a href="https://sites.google.com/uoh.cl/uoh-ai-robotics-group/home" target="_blank">AI &amp; Robotics Group</a></br>
-			<a href="https://www.uoh.cl/" target="_blank">Universidad de O'Higgins</a></br>
-			Title of the talk: <it>Model-Based Sensing for Soft Robotics with SOFA</it><br/>
-			<b>Abstract</b>:<br/>
-			In this talk, I will report on our work on model-based sensing for soft robots. Model-based sensing addresses the challenge of enabling tactile sensing and proprioception for soft robots in a principled way. Using inverse problem solving in an interactive solid mechanics simulation,
-the forces/deformations that best explain the observed sensor readings
-can be found. The first results in this line of research were obtained
-with soft pads, which are passive devices. Air chambers are embedded in
-these devices and changes in volume or pressure are measured by
-pneumatic sensors. Forces magnitudes and deformations due to external
-interactions could be estimated using SOFA. However, for estimating
-contact location, machine learning had to be employed. Therefore, as a
-follow-up, a multi-modal sensing approach was proposed: contact location
-is obtained additionally using soft capacitive touchpads. With them,
-interactions can completely be handled by the model-based approach, i.e.
-without relying machine learning. In more recent works, it was studied
-how these approaches can be applied to actuated devices. We have found
-that these results can be applied to the development of anatomical soft
-robots, that is, novel medical phantoms having advanced functionality as
-well as multi-segment soft manipulators.
-		</p>
-	</div>
-		
-	</table>
-</div>
-</div>
-
-		</div>
-      <!-- ####################################################################################################### -->
-    </div>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper row4">
-  <div class="rnd">
-    <div id="footer" class="clear">
-      <p> Satellite Event - <a target="blank" href="http://ieee-icra.org/">IEEE ICRA 2025</a>
-<p>
-<div style="margin: auto;">
-	
-<tr>
-<td><a target="blank" href="https://www.uchile.cl"><img src="images/uchile.png" alt="Universidad de Chile" height="110px" width="auto" style="float: center; margin:10px;"></a></td>
-<td><a target="blank" href="https://www.udec.cl"><img src="images/udec.png" alt="Universidad de Concepción" height="80px" width="auto" style="float: center; margin:10px;"></a></td>
-<td><a target="blank" href="https://www.uoh.cl"><img src="images/uoh.png" alt="Universidad de O'Higgins" height="110px" width="auto" style="float: center; margin:10px;"></a></td>
-</tr><br>
-
-<tr>
-<td><a target="blank" href="https://www.unab.cl"><img src="images/unab.PNG" alt="Universidad Andres Bello" height="100px" width="auto" style="float: center; margin:10px;"></a></td>
-<td><a target="blank" href="https://www.uach.cl"><img src="images/uach.png" alt="Universidad Austral" height="100px" width="auto" style="float: center; margin:10px;"></a></td>
-<td><a target="blank" href="https://www.ieeechile.cl/ras"><img src="images/ras_centro.jpg" alt="IEEE RAS Chile Centro" height="110px" width="auto" style="float: center; margin:10px;"></a></td>
-</tr><br>
-
-<tr>
-<td><a target="blank" href="https://www.ieeechile.cl"><img src="images/ieeecl.png" alt="IEEE Chile Centro" height="70px" width="auto" style="float: center; margin:10px;"></a></td>
-<td><a target="blank" href="https://site.ieee.org/chilesur/"><img src="images/ieeesur.png" alt="IEEE Chile Sur" height="80px" width="auto" style="float: center; margin:10px;"></a></td>
-</tr><br><br>
-	</div>
-    </div>
-  </div>
-</div>
-<!-- ####################################################################################################### -->
+    <script>
+        function toggleAbstract(button) {
+            const abstractContent = button.nextElementSibling;
+            const arrow = button.querySelector('.arrow');
+            
+            // Toggle the expanded/collapsed state
+            abstractContent.classList.toggle('collapsed');
+            abstractContent.classList.toggle('expanded');
+            button.classList.toggle('expanded');
+            
+            // Scroll to the abstract if expanding
+            if (abstractContent.classList.contains('expanded')) {
+                abstractContent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+        
+        // Initialize abstracts - Darius Burschka's abstract starts expanded
+        document.addEventListener('DOMContentLoaded', function() {
+            const initialAbstract = document.querySelector('.abstract-content.expanded');
+            if (initialAbstract) {
+                const initialButton = initialAbstract.previousElementSibling;
+                initialButton.classList.add('expanded');
+            }
+        });
+    </script>
 </body>
 </html>
