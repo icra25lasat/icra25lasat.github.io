@@ -98,6 +98,30 @@ The program will be finalized after the number of technical presentations of acc
 			<a href="https://ingenieria.uchile.cl/english/departments/electrical-engineering" target="_blank">Department of Electrical Engineering</a></br>
 			<a href="https://uchile.cl/" target="_blank">Universidad de Chile</a></br>
 			Title of the talk: <it>Advancing State Estimation: Insights from Random Finite Sets</it></br>
+		<b>Abstract</b>:<br/>
+Autonomous navigation, mapping, and multi-target tracking are state estimation problems
+relevant to a wide range of applications. In such applications, estimation has very little meaning
+without a clear concept of estimation error. State-of-the-art solutions have traditionally been
+formulated using random vectors (RVs) in stochastic filtering, smoothing, or optimization based
+approaches, but fail to jointly minimize both spatial and detection errors, without the use of addon heuristics. In the Simultaneous Localization and Mapping (SLAM) problem, this usually takes
+the form of a back end solver and an independent front end, necessary for implementing the
+detection and measurement-to-state association heuristics. In contrast to RV-based approaches,
+the use of Random Finite Sets (RFS) yields a general measurement likelihood, which allows data
+association and map management routines to be a native part of the entire estimation approach,
+effectively combining the SLAM back and front ends into a single, joint estimation framework.
+RFS formulations also allow the joint consideration of detection and clutter statistics within the
+estimator and have recently attracted considerable research interest as well as deployment in
+commercial applications.<br/>
+As well as justifying the general application of RFS frameworks, this presentation will focus on
+new RFS-based solutions to SLAM. To encompass the advantages of recent Maximum likelihood
+(ML) batch approaches, which use sparse matrix methods such as the g2o solver, it will be shown
+that the SLAM state can be modelled as a mixed distribution. This distribution jointly represents
+the vector-valued trajectory and the RFS-valued map, and is referred to as the Vector-Generalized
+Labeled Multi Bernoulli (V-GLMB) distribution. This yields hybrid RFS-RV-SLAM solutions,
+which yield competitive, and often superior, results to their RV-SLAM counterparts, while
+circumventing the need for fragile data association methods. A framework for solutions which
+combine the SLAM back and front ends into a single ML estimation framework will be
+demonstrated.		
 		</p>
 	</div>
 
