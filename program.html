@@ -75,7 +75,7 @@ tr:nth-child(even) {
 <div class="container" style="font-size:18px;">
   <b>TENTATIVE program subject to modifications </b>
 </div>	
-<img src="images/PreliminaryProgram20250513.png" alt="TENTATIVE program" height="300px">
+<img src="images/PreliminaryProgram20250513b.png" alt="TENTATIVE program" height="300px">
 	    
 </div>
 </div>
@@ -249,8 +249,13 @@ path planning, obstacle avoidance and manipulation.
 			<strong><a href="https://fi.udec.cl/academicos/julio-godoy-del-c/" target="_blank">Julio Godoy</br></a></strong>
 			<a href="https://scholar.google.com/citations?user=72ciZxEAAAAJ&hl=en" target="_blank">Google Scholar</a></br>
 			<a href="https://fi.udec.cl/" target="_blank">Universidad de Concepcion</a></br>
-			Title of the talk: <it></it><br/>
-			<b>Abstract</b>:<br/>
+			Title of the talk: <it>Online Action Selection Methods for Multi-Agent Navigation</it><br/>
+			<b>Abstract</b>:<br/>In multi-agent navigation, agents have to move from their start positions to their
+goal locations while avoiding collisions with other agents and any static element in the
+environment. Existing methods either compute the motion of each agent centrally or
+allow each agent to compute its own motion. Using a central controller limits the number
+of agents that can be controlled in real time, while using a local method produces motions that are optimal locally but do not account for the motions of the other agents, producing inefficient global motions when many agents move in a crowded space. Recently, a set of methods has been proposed that uses Deep Reinforcement Learning to learn navigation policies. However, these approaches require extensive training for each environment considered. In this talk, we present a set of online action selection methods that each agent uses to dynamically adapt its behavior to the local conditions. These approaches are highly scalable because each agent makes its own decisions on how to move, and do not require training. We validate the approaches experimentally,
+with multiple simulations in a variety of environments and with different numbers of agents, as well as with a small number of robots. When compared to other techniques, the proposed approaches produce motions that are more efficient and make better use of the space, allowing agents to reach their destinations faster.
 		</p>
 	</div>
 
